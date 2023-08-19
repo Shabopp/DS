@@ -44,7 +44,7 @@ int main() {
 /*
 Given matrix:
 
-Copy code
+
 1 2 3
 4 5 6
 7 8 9
@@ -58,7 +58,7 @@ i = 2, j = 1: Swapping matrix[2][1] and matrix[1][2]
 i = 2, j = 2: Swapping matrix[2][2] and matrix[2][2] (no change)
 Matrix after first loop:
 
-Copy code
+
 1 4 7
 2 5 8
 3 6 9
@@ -69,7 +69,7 @@ i = 1: Reversing the second row (8 5 2)
 i = 2: Reversing the third row (9 6 3)
 Final rotated matrix after both loops:
 
-Copy code
+
 7 4 1
 8 5 2
 9 6 3
