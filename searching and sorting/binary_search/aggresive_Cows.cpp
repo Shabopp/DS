@@ -24,7 +24,7 @@ int cows(int arr[],int n,int cows)
 {
     int s=0;
     int ans=-1;
-    int e=10^9;
+    int e=arr[n-1];
     int mid=s+(e-s)/2;
     while(s<=e)
     {

@@ -1,53 +1,52 @@
-#include <bits/stdc++.h>
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-char check(char ch) {
-    if (ch >= 'a' && ch <= 'z') {
+char lowercase(char ch)
+{
+  
+    if(ch>='a' && ch<='z')
+    {
         return ch;
-    } else {
-        return ch - 'A' + 'a';
     }
+    else{
+     char temp=ch-'A'+'a';
+     return temp;
+     }
+   
 }
+bool checkpalindrome(char name[],int n)
+{
+    int s=0;
+    int e=n-1;
+    while(s<=e){
+    if(lowercase(name[s])!=lowercase(name[e]))
+    {
+        return 0;
 
-bool valid(char ch) {
-    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9')) {
-        return true;
-    } else {
-        return false;
     }
+    else{
+        s++;
+        e--;
+
+    }
+  
 }
-
-bool checkPalindrome(string s) {
-    int st = 0;
-    int e = s.length() - 1;
-    while (st <= e) {
-        if (valid(s[st])) {
-            if (valid(s[e])) {
-                if (check(s[st]) != check(s[e])) {
-                    return false;
-                } else {
-                    st++;
-                    e--;
-                }
-            } else {
-                e--;
-            }
-        } else {
-            st++;
-        }
-    }
-    return true;
+  return 1;
 }
-
-int main() {
-    string input;
-    cout << "Enter a string: ";
-    cin >> input;
-    if (checkPalindrome(input)) {
-        cout << "The input string is a palindrome." << endl;
-    } else {
-        cout << "The input string is not a palindrome." << endl;
+int getlength(char name[])
+{
+    int count=0;
+    for (int i = 0;name[i]!='\0'; i++)
+    {
+        count++;
     }
-    return 0;
+   return count; 
+}
+int main()
+{
+    char name[20];
+    cout<<"Enter a Name"<<endl;
+    cin>>name;
+    int len=getlength(name);  
+cout<<"name is palindrome or not : "<< checkpalindrome(name,len);
+return 0;
 }
