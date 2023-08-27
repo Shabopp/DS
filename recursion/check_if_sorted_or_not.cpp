@@ -12,15 +12,15 @@ bool checksorted(int arr[],int size)
         return false;
     }
     else{
-    bool remainingpart= checksorted(arr+1,size-1);
-    return remainingpart;
+     return  checksorted(arr+1,size-1);
+   
     }
     
 }
 
 int main()
 {
-    int arr[5]={1,2,0,4,5};
+    int arr[5]={1,2,3,4,5};
     if( checksorted(arr,5))
     {
         cout<<"sorted";
@@ -45,4 +45,4 @@ It checks if arr[0] (which is now 2) is greater than arr[1] (which is 0). Since 
 Since the first recursive call returned false, the checksorted function in the main function also returns false. Therefore, the output of this code will be "unsorted."
 
 In this case, the array {1, 2, 0, 4, 5} is not sorted in non-decreasing order, and the code correctly identifies it as "unsorted."
-/*
+*/
